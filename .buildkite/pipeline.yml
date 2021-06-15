@@ -4,6 +4,4 @@ env:
   BUILD_QUEUE: "tester"
 
 steps:
-  - command: echo "this went to the tester queue"
-    agents:
-      queue: $BUILD_QUEUE
+  - command: buildkite-agent pipeline upload queue_tester_pipeline.yml

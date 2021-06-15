@@ -1,0 +1,11 @@
+agents:
+  queue: $BUILD_QUEUE
+
+steps:
+  - command: echo "this should run in the queue specified in my pipeline yaml"
+
+  - command: echo "because I set step defaults above, rather than specifying a queue for each step, this step should also use the tester queue"
+
+  - command: echo "I want this step to run in the default queue, though"
+    agents:
+      queue: "default"
