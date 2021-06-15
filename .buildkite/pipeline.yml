@@ -1,0 +1,9 @@
+name: "Env var testing"
+description: "just a test"
+env:
+  BUILD_QUEUE: "tester"
+
+steps:
+  - command: echo "this went to the tester queue"
+    agents:
+      queue: $BUILD_QUEUE
