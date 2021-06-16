@@ -9,3 +9,14 @@ steps:
   - command: echo "I want this step to run in the default queue, though"
     agents:
       queue: "default"
+
+  - input: "Boolean input"
+    fields:
+      - select: "Bool"
+        key: "result"
+        required: false
+        options:
+          - label: "True"
+            value: "true"
+          - label: "False"
+            value: "false"
